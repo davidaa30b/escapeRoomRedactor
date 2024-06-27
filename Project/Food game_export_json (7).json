@@ -1,0 +1,156 @@
+{
+  "game": {
+    "game_id": 1,
+    "modes": "both",
+    "name": "Food game",
+    "status": "public",
+    "default_language": "en",
+    "logo": {
+      "internal": "false",
+      "data": "#NA",
+      "size": "#NA",
+      "url": "https://img.freepik.com/premium-vector/fast-food-illustration-set_121223-1482.jpg?w=2000"
+    },
+    "category": "Social",
+    "access_key": "",
+    "pauses_number": 1,
+    "group_size": "#NA",
+    "gamers_age": "#NA",
+    "setup_game": {
+      "lockers": [
+        {
+          "id": "1",
+          "logo": "assets/images/locks/digit.png",
+          "comment": " 1.jpg 2.jpg 3.jpg ",
+          "type": "Word Lock",
+          "result": "pizza",
+          "attempts_number": "1",
+          "show_attempts": "true",
+          "points": 3,
+          "lock_regex": "#NA",
+          "force_order": "true",
+          "enable_after": "locker-1",
+          "resources": [
+            {
+              "link": "https://www.youtube.com/watch?v=1-SJGQ2HLp8&ab_channel=JamieOliver"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "logo": "assets/images/locks/word.png",
+          "comment": " 1.jpg 2.jpg 3.jpg ",
+          "type": "Word Lock",
+          "result": "spaghetti",
+          "attempts_number": "2",
+          "show_attempts": "true",
+          "points": 1,
+          "lock_regex": "#NA",
+          "force_order": "true",
+          "enable_after": "locker-2",
+          "resources": "list-with-files for that locker"
+        }
+      ],
+      "story": {
+        "text": "This is a game of foods!",
+        "video": "story video url",
+        "resources": [
+          {
+            "id": "1",
+            "filename": {
+              "internal": "false",
+              "data": "#NA",
+              "size": "#NA",
+              "url": "https://hips.hearstapps.com/hmg-prod/images/delish-homemade-pizza-horizontal-1542312378.png?crop=1xw:0.843328335832084xh;center,top&resize=1200:*"
+            },
+            "fileext": "scene.edit.veiw.play.jpg",
+            "title": "Mystery 1",
+            "text": "Mystery 1",
+            "ext": "#NA"
+          },
+          {
+            "id": "2",
+            "filename": {
+              "internal": "false",
+              "data": "#NA",
+              "size": "#NA",
+              "url": "https://www.inspiredtaste.net/wp-content/uploads/2019/03/Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg"
+            },
+            "fileext": "scene.edit.veiw.play.jpg",
+            "title": "Mystery 2",
+            "text": "Mystery 2",
+            "ext": "#NA"
+          }
+        ],
+        "hints": [
+          {
+            "id": "11",
+            "filename": "#NA",
+            "fileext": "#NA",
+            "title": "Hint 1 for resource 1",
+            "text": "This dish originates from Italy and its base is made of dough."
+          },
+          {
+            "id": "22",
+            "filename": "#NA",
+            "fileext": "#NA",
+            "title": "Hint 1 for resource 2",
+            "text": "This dish is laso Italian and is usually boiled in order to prepare."
+          }
+        ]
+      },
+      "video": {
+        "-src": "http://localhost",
+        "#text": "view locker settings tutorial"
+      },
+      "game_prepare_instructions": "Long text/bulets",
+      "game_prepare_instructions_video": "video1.mp4",
+      "game_resources": "resources_game1.zip",
+      "teacher_tool": {
+        "timer": "",
+        "hints_number": "2",
+        "music": "false",
+        "start_timer": {
+          "-start_timer": "start_after",
+          "#text": "20: 15"
+        }
+      },
+      "reflection_questions": {
+        "ol": {
+          "li": ["Q1..", "Q2..", "Q3..", "Q4..", "Q5.."]
+        }
+      },
+      "extra_requirements": "\n\t  \t        ADDITONAL 4-DIGIT LOCK OR USE OF LOCKS APP\n        "
+    },
+    "extensions": [
+      {
+        "id": 1,
+        "lockerId": 1,
+        "open_url": "http://localhost:4201?app=|gameName|&gameId=|gameId|&username=|player|&mystery=|index|",
+        "back_url": "http://localhost:55618/api/ApplicationMystery/mystery-answer?gameId=|gameId|&UserName=|player|&MysteryIndex=|index|&Answer=|answer|",
+        "icon": "icon.jpg",
+        "title": "locker extension 1",
+        "params1": {
+          "open_url": "http://localhost:4201",
+          "app": "gameName",
+          "gameId": "100XX",
+          "username": "milenp@fmi.uni-sofia.bg",
+          "pass": "123",
+          "return_pass": "456",
+          "mistery": "M1",
+          "ui_lang": "bg",
+          "game_lang": "bg",
+          "ui_theme": "dark"
+        },
+        "params2": {
+          "back_url": "http://localhost:55618/api/ApplicationMystery/mystery-answer?",
+          "gameId": "100XX",
+          "username": "milenp@fmi.uni-sofia.bg",
+          "return_pass": "456",
+          "mistery": "M1",
+          "answer": "answer string"
+        }
+      }
+    ]
+  }
+}
